@@ -2,51 +2,189 @@
   margin: 0;
   padding: 0;
 }
+body {
+  background-color: #d8f3dc;
+}
+title::after {
+  content: "|";
+  animation: caret 0.8s ease infinite;
+}
+@keyframes caret {
+  50% {
+    opacity: 0;
+  }
+}
+/* 起動画面 */
+.opening {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("images/opening.jpg");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: opening 1s ease-out 5s forwards;
+}
+@keyframes opening {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 .title {
-  padding-top: px;
-  padding-left: 90px;
-}
-.picture-box {
-  background-image: url(top.jpg);
-  width: 100%;
-  height: 80vh;
-  background-size: 80%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.name1 {
-  margin-top: -140px;
-  margin-left: 90px;
-}
-.about-pic {
-  padding-top: 130px;
-  padding-left: 200px;
-  width: 50%;
-}
-.about-box {
-  display: flex;
-}
-.about-text {
-  padding-top: 150px;
-  padding-left: 50px;
-}
-.hobby-box {
-  display: flex;
-  margin-top: 100px;
-  justify-content: space-between;
-  padding-left: 100px;
-  padding-right: 20px;
-}
-.hobby-pic1 {
-  width: 18%;
-}
-.hobby-pic2 {
-  width: 18%;
-}
-.hobby-pic3 {
-  width: 18%;
+  font-size: 4vw;
+  font-family: "Josefin Sans", sans-serif;
+  overflow: hidden;
+  color: black;
+  white-space: nowrap;
+  border-right: solid transparent;
 }
 
+
+/*ヘッダー*/
+header {
+  background-image: url(images/top.jpg);
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+}
+header h1 {
+  font-size: 50px;
+  padding-top: 40px;
+  padding-left: 70px;
+  float: left;
+}
+header li {
+  display: flex;
+  float: right;
+  padding-top: 60px;
+  padding-right: 50px;
+  font-size: 30px;
+}
+header a {
+  color: black;
+  text-decoration: none;
+}
+/*プロフィール*/
+.section-title {
+  color: #00aba6;
+  border-left: #00aba6 solid 10px;
+  padding-left: 20px;
+  margin-left: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  height: 50px;
+  width: 300px;
+  font-size: 36px;
+  z-index: 3;
+  animation-name: action;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes action {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.my-profile-content {
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  background-color: #fff;
+  padding: 15px 10px 15px 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+.pro-content-img {
+  text-align: center;
+  width: 60%;
+  margin: 10px 0;
+}
+.pro-content-img img {
+  width: 60%;
+  border-radius: 50%;
+}
+.prof-detail {
+  line-height: 40px;
+  flex-flow: column;
+  align-content: space-around;
+  text-align: left;
+}
+/*ふきだし*/
+.h img{
+  width: 30%;
+  position: relative;
+}
+.h h4{
+  position: absolute;
+  margin-top: 190px;
+  text-align: center;
+}
+.h{
+  display: flex;
+  justify-content: center;
+  margin: -130px 0;
+}
+
+/*hobby*/
+.hobby ul {
+  text-align: center;
+  display: table;
+  margin: auto;
+  padding-bottom: 17px;
+}
+.hobby li {
+  display: table-cell;
+  vertical-align: middle;
+  width: 25vw;
+  font-size: 2vw;
+}
+
+.li1,
+.li5,
+.li9 {
+  cursor: pointer;
+  background-color: white;
+}
+.li2 img,
+.li3 img,
+.li4 img,
+.li6 img,
+.li7 img,
+.li8 img {
+  width: 90%;
+}
+
+/*作品*/
+
+/*リンク*/
+.Link img {
+  height: 150px;
+}
+.link-contents {
+  display: flex;
+  justify-content: center;
+}
+.link-content {
+  margin: 0 30px;
+}
+.insta-pic {
+  border-radius: 35px;
+}
 footer {
   height: 150px;
   background-color: black;
