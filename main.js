@@ -71,3 +71,17 @@ li9.onclick = function () {
   nine += 1;
 };
 
+/*slideshow*/
+const pics_src = ["images/yume1.png","images/yume2.png","images/yume3.png","images/yume4.png"]
+let num = -1;
+function slideshow_timer(){
+  if (num === 3){
+    num = 0;
+  }
+  else{
+    num ++;
+  }
+  document.getElementById("yumetabi").src = pics_src[num];
+}
+setInterval(slideshow_timer,4000);
+
